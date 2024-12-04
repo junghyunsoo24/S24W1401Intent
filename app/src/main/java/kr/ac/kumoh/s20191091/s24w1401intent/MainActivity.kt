@@ -117,5 +117,15 @@ fun IntentButtons(modifier: Modifier = Modifier) {
         ) {
             Text("문자")
         }
+
+        Button(
+            modifier = modifier.fillMaxWidth(),
+            onClick = {
+                val intent = Intent(context, SecondActivity::class.java)
+                context.startActivity(intent)
+            }
+        ) {
+            Text("Activity")
+        }
     }
 }
